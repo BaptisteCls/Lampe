@@ -44,5 +44,3 @@ document.querySelector("head").innerHTML += `
 }
 </style>
 `;
-
-console.log(document.documentElement.scrollTop);

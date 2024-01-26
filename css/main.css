@@ -1,0 +1,39 @@
+*{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+}
+
+body{
+    inset: 0;
+    margin: 0;
+
+    background-color: #c57e7e;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+main{
+    inset: 0;
+    margin: 0;
+    padding-top: 120px;
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    transition: 500ms;
+}
+
+.container{
+    margin: 500px 0px;
+}
+
+@media screen and (max-width:1110px){
+}
