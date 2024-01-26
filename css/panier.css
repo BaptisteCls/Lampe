@@ -1,0 +1,96 @@
+#panier{
+    width: 100%;
+    height: 100vh;
+    max-width: 730px;
+
+    top: 0;
+    right: 0;
+
+    position: fixed;
+    z-index: 10;
+
+    background-color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    transition: all ease-in-out 300ms;
+    transform: translateX(1000px);
+}
+
+#panier .title{
+    padding: 30px 0px;
+
+    width: 85%;
+
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 25px;
+}
+
+#panier i{
+    font-size: 30px;
+    color: #333;
+}
+
+#panier button, #panier i{
+    cursor: pointer;
+}
+
+#panier .buttons{
+    width: 85%;
+
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#panier button{
+    width:100%;
+    min-width: 250px;
+    max-width: 250px;
+
+    border-radius: 35px;
+    border: #222 solid 1.5px;
+
+    padding: 15px 20px;
+    margin-top: 20px;
+
+    transition: 200ms all ease-in-out;
+}
+
+#panier .buttons>button:first-child{
+    background-color: transparent;
+}
+
+#panier .buttons>button:first-child:hover{
+    background-color: #00000010;
+}
+
+#panier .buttons>button:last-child{
+    background-color: #222;
+    color: white;
+}
+
+#panier .buttons>button:last-child:hover{
+    background-color: #110;
+}
+
+#fog{
+    inset: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    z-index: 8;
+    position: fixed;
+
+    background-color: rgba(0, 0, 0, 0.3);
+
+    visibility: hidden;
+    opacity: 0;
+
+    transition: all linear 200ms;
+}

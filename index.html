@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/panier.css">
     
     <title>Nom de la page</title>
 
@@ -16,6 +17,7 @@
 
     <script src="js/annonce.js" defer></script>
     <script src="js/header.js" defer></script>
+    <script src="js/panier.js" defer></script>
 </head>
 <body>
     <div id="headContainer">
@@ -26,8 +28,8 @@
                 <p>L'histoire</p>
                 <p>Réseaux</p>
             </div>
-            <img src="./img/logo.jpg">
-            <i class="fa-solid fa-bag-shopping"></i>
+            <img src="./img/logo.jpg" onclick="location.href = ''">
+            <i class="fa-solid fa-bag-shopping" onclick="togglePanier()"></i>
         </header>
     </div>
     <main>
