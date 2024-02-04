@@ -1,9 +1,12 @@
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
+import utils.Database;
+import utils.Sessions;
 import jakarta.servlet.annotation.WebServlet;
 
 @WebServlet("/authent")
