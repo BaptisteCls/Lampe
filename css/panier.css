@@ -17,6 +17,8 @@
 
     transition: all ease-in-out 300ms;
     transform: translateX(1000px);
+
+    overflow: auto;
 }
 
 #panier>.title{
@@ -61,22 +63,27 @@
     transition: 200ms all ease-in-out;
 }
 
+
+#panier .buttons>button{
+    background-color: #222;
+    color: white;
+}
+
+#panier .buttons>button{
+    background-color: #110;
+}
+
+
 #panier .buttons>button:first-child{
     background-color: transparent;
+    color: black;
 }
 
 #panier .buttons>button:first-child:hover{
     background-color: #00000010;
 }
 
-#panier .buttons>button:last-child{
-    background-color: #222;
-    color: white;
-}
 
-#panier .buttons>button:last-child:hover{
-    background-color: #110;
-}
 
 #fog{
     inset: 0;
@@ -98,6 +105,7 @@
 #panier .article{
     width: 90%;
     margin-left: 5%;
+    margin-bottom: 35px;
 
     display: flex;
     justify-content: space-between;
@@ -148,4 +156,9 @@
     color: black;
 
     font-size: 125%;
+}
+
+#panier h2{
+    display: none;
+    margin: 150px 0;
 }

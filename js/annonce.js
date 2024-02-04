@@ -3,7 +3,7 @@ const isDisplayFilter = element => element.style.display === "none";
 function setAnnoncesBorder(){
     annonces = document.querySelectorAll(".annonce");
     if(annonces.length === 1) annonces[0].style.borderBottom = "none";
-    else if(annonces.length > 1) for(let index = 0 ; index < annonces.length-1; index ++) annonces[index].style.borderBottom = "grey solid .5px"; 
+    else if(annonces.length > 1) for(let index = 0 ; index < annonces.length-1; index ++) annonces[index].style.borderBottom = "grey solid .3px"; 
 }
 
 let annonces = document.querySelectorAll(".annonce");
