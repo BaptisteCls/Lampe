@@ -2,7 +2,6 @@ package api.panier;
 
 import java.io.IOException;
 import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
@@ -10,10 +9,6 @@ import java.util.List;
 
 import com.google.gson.Gson;
 
-import jakarta.json.Json;
-import jakarta.json.JsonArray;
-import jakarta.json.JsonArrayBuilder;
-import jakarta.json.JsonValue;
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
 import utils.Database;
@@ -28,9 +23,9 @@ public class GetPanier extends HttpServlet{
 
         if(req.getSession(false) != null){
             try ( Connection con = Database.getConnection("website")) {
-                int userId = Integer.parseInt( (String) req.getSession(false).getAttribute("userId"));
+                long userId = new Sessions(req, resp).getUserId();
                 Statement stmt = con.createStatement();
-                String query = "SELECT name, image, color, Count(*) AS number, price, ino AS id FROM panier p INNER JOIN items i ON p.ino = i.ino WHERE uno = "+userId+" GROUP BY uno, ino";
+                String query = "SELECT name, image, color, Count(*) AS number, price, p.ino AS id FROM panier p INNER JOIN items i ON p.ino = i.ino WHERE uno = "+userId+" GROUP BY name, image, color, price, uno, p.ino;";
                 ResultSet rs = stmt.executeQuery(query);
                 while(rs.next()){
                     String name = rs.getString("name");

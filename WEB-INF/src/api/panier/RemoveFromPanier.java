@@ -10,21 +10,22 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import utils.Database;
+import utils.Sessions;
 
-@WebServlet("removeFromPanier")
+@WebServlet("/removeFromPanier")
 public class RemoveFromPanier extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         if(req.getSession(false) != null){
             try ( Connection con = Database.getConnection("website")) {
-                int userId = Integer.parseInt( (String) req.getSession(false).getAttribute("userId"));
+                long userId = new Sessions(req, resp).getUserId();
                 int itemId = Integer.parseInt(req.getParameter("item"));
                 String color = req.getParameter("color");
 
-                String update = "DELETE FROM panier WHERE uno = ? AND ino = ? AND color = ?";
+                String update = "DELETE FROM panier WHERE pno IN (SELECT pno FROM panier WHERE uno = ? AND ino = ? AND color = ? LIMIT 1)";
                 PreparedStatement stmt = con.prepareStatement(update);
 
-                stmt.setInt(1, userId);
+                stmt.setLong(1, userId);
                 stmt.setInt(2, itemId);
                 stmt.setString(3, color);
 

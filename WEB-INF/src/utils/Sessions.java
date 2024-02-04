@@ -1,8 +1,15 @@
 package utils;
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.util.Date;
 
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
+import jakarta.websocket.Session;
 import jakarta.servlet.annotation.WebServlet;
 
 public class Sessions {
@@ -12,6 +19,26 @@ public class Sessions {
     public Sessions(HttpServletRequest req, HttpServletResponse resp){
         this.req = req;
         this.resp = resp;
+    }
+
+    public void initUserId(){
+        HttpSession session = req.getSession(true);
+        session.setMaxInactiveInterval(999999999);
+        Object userId = session.getAttribute("userId");
+        if(userId == null){
+            try (Connection con = Database.getConnection("website")) {
+                long newId = new Date().getTime();
+                req.getSession(false).setAttribute("userId", "" + newId);
+            } catch (Exception e) {}
+        }
+    }
+
+    public long getUserId(){
+        initUserId();
+        try {
+            return Long.parseLong(getAttribute("userId"));
+        } catch (Exception e) {}
+        return -1;
     }
 
     public boolean sessionExist(){
@@ -34,4 +61,9 @@ public class Sessions {
         redirectIfNotExist(redirect);
         return (String) req.getSession(true).getAttribute(name);
     }
+
+    public String getAttribute(String name) throws IOException{
+        return (String) req.getSession(false).getAttribute(name);
+    }
+
 }
