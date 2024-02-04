@@ -1,3 +1,6 @@
+package utils;
+import java.io.IOException;
+
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.WebServlet;
@@ -15,11 +18,11 @@ public class Sessions {
         return req.getSession(false) != null;
     }
 
-    public boolean redirectIfNotExist(String redirection){
+    public boolean redirectIfNotExist(String redirection) throws IOException{
         if(!sessionExist()){
             resp.sendRedirect(redirection);
             return true;
-        } 
+        }
         return false;
     }
 
@@ -27,7 +30,7 @@ public class Sessions {
         req.getSession(true).setAttribute(name, value);;
     }
 
-    public String getAttributeIfExistElseRedirect(String redirect, String name){
+    public String getAttributeIfExistElseRedirect(String redirect, String name) throws IOException{
         redirectIfNotExist(redirect);
         return (String) req.getSession(true).getAttribute(name);
     }
