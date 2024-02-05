@@ -10,7 +10,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import utils.Database;
-import utils.Sessions;
+import utils.SessionManager;
 
 @WebServlet("/removeFromPanier")
 public class RemoveFromPanier extends HttpServlet {
@@ -18,7 +18,7 @@ public class RemoveFromPanier extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         if(req.getSession(false) != null){
             try ( Connection con = Database.getConnection("website")) {
-                long userId = new Sessions(req, resp).getUserId();
+                long userId = new SessionManager(req, resp).getUserId();
                 int itemId = Integer.parseInt(req.getParameter("item"));
                 String color = req.getParameter("color");
 

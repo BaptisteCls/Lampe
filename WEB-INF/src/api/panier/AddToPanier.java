@@ -10,7 +10,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import utils.Database;
-import utils.Sessions;
+import utils.SessionManager;
 import utils.Test;
 
 
@@ -21,7 +21,7 @@ public class AddToPanier extends HttpServlet{
         //Test test = new Test(resp.getWriter());
 
         try ( Connection con = Database.getConnection("website")) {
-            long userId = new Sessions(req, resp).getUserId();
+            long userId = new SessionManager(req, resp).getUserId();
             int itemId = Integer.parseInt(req.getParameter("item"));
             String color = req.getParameter("color");
 

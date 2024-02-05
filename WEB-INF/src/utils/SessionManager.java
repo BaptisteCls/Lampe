@@ -1,22 +1,15 @@
 package utils;
 import java.io.IOException;
 import java.sql.Connection;
-import java.sql.ResultSet;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
 import java.util.Date;
 
-import jakarta.servlet.*;
 import jakarta.servlet.http.*;
-import jakarta.websocket.Session;
-import jakarta.servlet.annotation.WebServlet;
 
-public class Sessions {
+public class SessionManager {
     private HttpServletResponse resp;
     private HttpServletRequest req;
 
-    public Sessions(HttpServletRequest req, HttpServletResponse resp){
+    public SessionManager(HttpServletRequest req, HttpServletResponse resp){
         this.req = req;
         this.resp = resp;
     }

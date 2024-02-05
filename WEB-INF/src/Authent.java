@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
 import utils.Database;
-import utils.Sessions;
+import utils.SessionManager;
 import jakarta.servlet.annotation.WebServlet;
 
 @WebServlet("/authent")
@@ -31,7 +31,7 @@ public class Authent extends HttpServlet{
         res.sendRedirect("login?e=t");
       }
       else{
-        Sessions sessions = new Sessions(req, res);
+        SessionManager sessions = new SessionManager(req, res);
         sessions.setAttribute("login", login);
 
         String from = req.getParameter("from");
