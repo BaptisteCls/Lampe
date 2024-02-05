@@ -1,6 +1,7 @@
 package api.panier;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
@@ -41,7 +42,13 @@ public class GetPanier extends HttpServlet{
         }
 
         String json = new Gson().toJson(panier);
+
         resp.setContentType("application/json");
-        resp.getWriter().write(json);
+        resp.setCharacterEncoding("UTF-8");
+
+        PrintWriter out = resp.getWriter();
+        out.print(json);
+        out.flush();
+        out.close();
     }
 }

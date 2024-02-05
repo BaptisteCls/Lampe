@@ -20,17 +20,64 @@ const panierHeaderHtml = `
 
 const panier = document.getElementById("panier");
 
+function clearPanier(panier){
+    for (let index = 0; index < panier.childNodes.length; index++) {
+        const child = panier.childNodes[index];
+        if(child.classList!=null && child.classList.contain("article")) panier.removeChild(child); 
+    }
+}
+
+function panierItemToHtml(item){
+    return `
+            <div class="article">
+                <img src="${item.image}" alt="">
+                <div class="infos">
+                    <p class="title">${item.name}</p>
+                    <p>Couleur : ${item.color}</p>
+                    <p>Prix unitaire : ${item.price} €</p>
+                    <div class="number">
+                        <i class="fa-solid fa-minus"></i>
+                        <p>${item.number}</p>
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                </div>
+            </div>
+        `;
+}
+
+
+function getPanierToHtml(){
+    return fetch('/lampe/getPanier', {
+      method: 'GET',
+      mode: "cors",
+      headers: {
+        "Content-Type": "application/json",
+        // 'Content-Type': 'application/x-www-form-urlencoded',
+      },
+    })
+        .then(response => response.json())
+        .then(data => data);
+}
+
+function updatePanier(panier){
+    clearPanier(panier);
+    panier.innerHTML = panierTitleHtml;
+    console.log(getPanierToHtml());
+    panier.innerHTML += panierButtonsHtml;
+}
+
 if(panier != null){
+    updatePanier(panier);
+
     const body = document.querySelector("body");
 
-    panier.innerHTML = panierTitleHtml + panier.innerHTML + panierButtonsHtml;
     body.innerHTML += panierFogHtml;
     document.querySelector("header").innerHTML += panierHeaderHtml;  
 
-    if(document.querySelectorAll("#panier .article").length === 0){
+    /*if(document.querySelectorAll("#panier .article").length === 0){
         document.querySelector("#panier .buttons>button:last-child").style.display = "none";
         document.querySelector("#panier h2").style.display = "block";
-    }
+    }*/
 
     function getTranslateX(e) {
         var style = window.getComputedStyle(e);
