@@ -1,0 +1,53 @@
+header{
+    left: 0;
+    right: 0;
+    top: 0;
+
+    height: 80px;
+    width: 100%;
+    
+    background: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    font-size: 16px;
+}
+
+header img{
+    height: 60%;
+    filter: drop-shadow(0 0 2rem rgb(29, 28, 28));
+}
+
+header>i, header img, header p{
+    cursor: pointer;
+}
+
+header p:hover{
+    filter: drop-shadow(0 0 1rem rgb(78, 78, 78));
+    transition: all ease-in-out 200ms;
+}
+
+header i{
+    font-size: 26px;
+    margin-right: 10px;
+}
+
+header div{
+    display: flex;
+    justify-content: space-around;
+}
+
+header p{
+    display: flex;
+    align-items: center;
+}
+
+header>i{
+    text-align: center;
+}
+
+header>div, header>i{
+    width: 40%;
+}
