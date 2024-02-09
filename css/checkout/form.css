@@ -1,0 +1,32 @@
+.form{
+    width: 50%;
+    min-width: 600px;
+    
+    filter: drop-shadow(0 0 .2rem rgb(139, 139, 139));
+}
+
+.form .cat{
+    width: 100%;
+
+    padding: 10px 20px;
+    
+    display: flex;
+    justify-content: center;
+
+    background-color: white;
+
+    border-top: 1px solid #ccc;
+
+    cursor: pointer;
+}
+
+.form .cat p{
+    margin: 0;
+
+    width: 95%;
+}
+
+.form .cat p i{
+    font-size: 24px;
+    margin-right: 25px;
+}

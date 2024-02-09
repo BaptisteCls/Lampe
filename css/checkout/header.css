@@ -6,13 +6,13 @@ header{
     height: 80px;
     width: 100%;
     
-    background: white;
+    background: rgb(251,248,244);
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    font-size: 16px;
+    font-size: 19px;
 }
 
 header img{

@@ -1,0 +1,67 @@
+.estimate{
+    background-color: white;
+
+    padding: 20px 40px;
+    
+    filter: drop-shadow(0 0 .4rem rgb(0, 0, 0));
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 500px;
+    min-width: 500px;
+    min-height: 600px;
+}
+
+.estimate div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 10px 0;
+
+    width: 100%;
+}
+
+.estimate>i{
+    font-size: 40px;
+    margin: 20px 0;
+}
+
+.estimate .line{
+    border-top: 1px solid #ccc;
+}
+
+.estimate .item{
+    font-size: 22px;
+}
+
+.estimate .item p{
+    text-align: left;
+}
+
+.estimate .total{
+    font-size: 26px;
+    border-bottom: 2px solid #d4d4d4;
+    margin-bottom: 20px;
+}
+
+.estimate div i{
+    margin-right: 15px;
+}
+
+.estimate div p:not(.item p, .total p){
+    margin: 0;
+    color: #666;
+}
+
+.estimate pre{
+    display: flex;
+}
+
+.estimate pre p:first-child{
+    margin-right: 15px;
+}
