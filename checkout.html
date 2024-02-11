@@ -12,11 +12,13 @@
     <link rel="stylesheet" href="./css/checkout/primary.css">
     <link rel="stylesheet" href="./css/checkout/footer.css">
     <link rel="stylesheet" href="./css/checkout/estimate.css">
-    <link rel="stylesheet" href="css/checkout/form.css">
+    <link rel="stylesheet" href="./css/checkout/form.css">
     
     <title>Valider le panier</title>
 
     <script src="https://kit.fontawesome.com/c2507bb805.js" crossorigin="anonymous"></script>
+
+    <script src="./js/checkout/category.js" defer></script>
 </head>
 <body>
     <header>
@@ -62,31 +64,89 @@
             <div class="cat"><p><i class="fa-solid fa-circle-info"></i>1. Informations personnelles</p></div>
             <div class="part">
                 <form action="" method="">
-                    <p>Civilité</p>
-                    <div class="civilité">
-                        <input type="checkbox" name="M" id="">
-                        <label for="M">M</label>
-                        <input type="checkbox" name="Mme" id="">
-                        <label for="Mme">Mme</label>
+                    <div class="vertical">
+                        <p>Civilité</p>
+                        <div class="civilité">
+                            <input type="radio" name="civilite" id="" value="M">
+                            <label for="M">M</label>
+                            <input type="radio" name="civilite" id="" value="Mme">
+                            <label for="Mme">Mme</label>
+                        </div>
+                    </div>
+                    <div class="vertical">
                         <label for="prenom">Prénom</label>
                         <input type="text" name="prenom" id="" required placeholder="Jean">
+                    </div>
+                    <div class="vertical">
                         <label for="nom">Nom</label>
                         <input type="text" name="nom" id="" required placeholder="Dupont">
+                    </div>
+                    <div class="vertical">
                         <label for="mail">Adresse Mail</label>
                         <input type="email" name="mail" id="" required placeholder="jean@dupont.fr">
+                    </div>
+                    <div class="vertical">
+                        <label for="telephone">Téléphone (Facultatif)</label>
+                        <input type="number" name="telephone" minlength="10" maxlength="10" min="0">
+                    </div>
+                    <div class="full">
                         <input type="checkbox" name="conditions" id="" required>
                         <label for="conditions">J'accepte les conditions générales et la politique de confidentialité</label>
-                        <input type="submit" value="Continuer">
                     </div>
+                    <input type="submit" value="Continuer">
                 </form>
             </div>
             <div class="cat"><p><i class="fa-solid fa-house"></i>2. Adresse</p></div>
             <div class="part">
-                
+                <form action="">
+                    <div class="vertical">
+                        <label for="prenom">Prénom</label>
+                        <input type="text" name="prenom" required placeholder="Jean">
+                    </div>
+                    <div class="vertical">
+                        <label for="nom">Nom</label>
+                        <input type="text" name="nom" required placeholder="Dupont">
+                    </div>
+                    <div class="vertical">
+                        <label for="societe">Société (Facultatif)</label>
+                        <input type="text" name="societe" placeholder="Dupont">
+                    </div>
+                    <div class="vertical">
+                        <label for="adresse">Adresse</label>
+                        <input type="text" name="adresse" required placeholder="Dupont">
+                    </div>
+                    <div class="vertical">
+                        <label for="complement">Complément d'adresse (Facultatif)</label>
+                        <input type="text" name="complement" placeholder="Dupont">
+                    </div>
+                    <div class="vertical">
+                        <label for="code">Code postal</label>
+                        <input type="text" name="code" required placeholder="Dupont">
+                    </div>
+                    <div class="vertical">
+                        <label for="ville">Ville</label>
+                        <input type="text" name="ville" required placeholder="Dupont">
+                    </div>
+                    <div class="vertical">
+                        <label for="pays">Pays</label>
+                        <select name="pays">
+                            <option value="France">France</option>
+                        </select>
+                    </div>
+                    <input type="submit" value="Continuer">
+                </form>
             </div>
             <div class="cat"><p><i class="fa-solid fa-cube"></i>3. Mode d’expédition</p></div>
             <div class="part">
-                
+                <form action="">
+                    <div class="full">
+                        <input type="radio" name="livraison" checked readonly><br>
+                        <p style="color: green; font-weight: bolder;">Livraison à domicile gratuite sous 48 à 72h</p>
+                    </div>
+                    <label for="commentaire">Si vous souhaitez ajouter un commentaire sur votre commande, veuillez l’écrire dans le champ ci-dessous.</label>
+                    <textarea name="commentaire" id="" cols="30" rows="3" class="full"></textarea>
+                    <input type="submit" value="Continuer">
+                </form>
             </div>
             <div class="cat"><p><i class="fa-solid fa-credit-card"></i>4. Paiement</p></div>
             <div class="part">

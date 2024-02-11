@@ -8,7 +8,7 @@
 .form .cat{
     width: 100%;
 
-    padding: 10px 20px;
+    padding: 10px 0;
     
     display: flex;
     justify-content: center;
@@ -29,4 +29,107 @@
 .form .cat p i{
     font-size: 24px;
     margin-right: 25px;
+}
+
+.form .part{
+    background-color: white;
+
+    padding: 15px 0;
+    
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+
+    display: none;
+}
+
+.form .part form{
+    width: 85%;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.form .part form div{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+}
+
+.vertical{
+    display: flex;
+    flex-direction: column;
+}
+
+.part label{
+    margin-bottom: 7px;
+    margin-left: 4px;
+    margin-right: 10px;
+}
+
+.part input[type=number], .part input[type=text], .part input[type=email], .part p, .part label, .part input[type=submit]{
+    font-size: 18px;
+    
+}
+
+.part input[type=number], .part input[type=text], .part input[type=email], select{
+    border: 3px solid #ccc;
+    border-radius: 5px;
+
+    max-width: 200px;
+    min-width: 200px;
+
+    padding: 5px 10px;
+
+    transition: border linear 200ms;
+    background-color: transparent;
+}
+
+.part input[type=number]:focus, .part input[type=text]:focus, .part input[type=email]:focus{
+    outline: none;
+    border: 3px solid #555;
+}
+
+.part input[type=submit]{
+    height: 40px;
+    width: 30%;
+    margin-left: 32.5%;
+
+    background-color: transparent;
+
+    border: 3px solid #333;
+    border-radius: 10px;
+
+    font-weight: bolder;
+}
+
+.part input[type=submit]:hover{
+    cursor: pointer;
+
+    background-color: #333;
+    color: white;
+}
+
+.full input[type=radio]{
+    margin-right: 20px;
+}
+
+.full{
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    text-align: right;
+    -moz-appearance:textfield;
 }
