@@ -52,7 +52,7 @@ function panierItemToHtml(item){
 async function reloadPanier(){
     const panier = document.getElementById("panier");
     panier.innerHTML = panierTitleHtml;
-    await fetch("/lampe/getPanier").then(resp => resp.json()).then(data => data.forEach(element => {
+    await fetch("/Lampe/getPanier").then(resp => resp.json()).then(data => data.forEach(element => {
         panier.innerHTML += panierItemToHtml(element);
     }));
     panier.innerHTML += panierButtonsHtml;
@@ -69,7 +69,7 @@ function reloadPanierIsVide(){
 
 async function decrement(i){
     item = i.parentNode.parentNode.parentNode;
-    await fetch(`/lampe/removeFromPanier?${item.getAttribute("name")}`);
+    await fetch(`/Lampe/removeFromPanier?${item.getAttribute("name")}`);
     numberElement = i.parentNode.childNodes[3];
     number = numberElement.innerHTML;
     if(number > 1) numberElement.innerHTML = number - 1 ;
@@ -81,7 +81,7 @@ async function decrement(i){
 
 async function increment(i){
     item = i.parentNode.parentNode.parentNode;
-    await fetch(`/lampe/addToPanier?${item.getAttribute("name")}`);
+    await fetch(`/Lampe/addToPanier?${item.getAttribute("name")}`);
     i.parentNode.childNodes[3].innerHTML = parseInt(i.parentNode.childNodes[3].innerHTML) +1;
 }
 

@@ -8,6 +8,6 @@
 		}
 	],
 	"settings": {
-		"java.project.outputPath": "classes"
+		"java.project.outputPath": "WEB-INF/classes"
 	}
 }
