@@ -1,3 +1,4 @@
 {
-    "java.project.outputPath": "classes"
+    "java.project.outputPath": "classes",
+    "java.debug.settings.onBuildFailureProceed": true
 }
