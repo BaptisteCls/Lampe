@@ -22,6 +22,7 @@ main{
     padding-top: 120px;
 
     width: 100%;
+    min-height: 600px;
 
     display: flex;
     flex-direction: column;
@@ -36,4 +37,9 @@ main{
 }
 
 @media screen and (max-width:1110px){
+}
+
+a{
+    text-decoration: none;
+    color: black;
 }
