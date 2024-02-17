@@ -1,0 +1,128 @@
+.produits{
+    width: 80%;
+    padding: 0 10%;
+
+    display: flex;
+    justify-content: center;
+    gap: 6%;
+    flex-wrap: wrap;
+
+    background-color: aqua;
+}
+
+.produit{
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 20px;
+}
+
+.produit .container{
+    cursor: pointer;
+
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 250px;
+    max-height: 250px;
+    
+    background-color: bisque;
+
+    background-position: center;
+    background-size:80%;
+    background-repeat: no-repeat;
+
+    border: solid 2px grey;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    overflow: hidden;
+}
+
+.produit .text{
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 17px;
+
+    margin-top: 5px;
+}
+
+.produit .text p{
+    margin: 0;
+}
+
+.produit .container:hover .btn{
+    transform: translateY(0);
+
+    opacity: 1;
+}
+
+.produit .container .btn{
+    width: 100%;
+    height: 70px;
+
+    backdrop-filter: blur(25px);
+
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+    transform: translateY(50px);
+
+    transition: all linear 50ms;
+    opacity: 0;
+}
+
+.produit .container .btn a{
+    background-color: black;
+    padding: 12px 17px;
+    border-radius: 10px;
+    color: white;
+    font-weight: bolder;
+    font-size: 17px;
+    transition: background-color 200ms linear;
+}
+
+.produit .container .btn a:hover{
+    background-color: rgb(42, 42, 42);
+}
+
+.produits .voir{
+    width: 100%;
+
+    margin: 40px 0;
+
+    display: flex;
+    justify-content: center;
+}
+
+.produits .voir a{
+    cursor: pointer;
+
+    border: solid 3px black;
+    border-radius: 10px;
+
+    background-color: black;
+    color: white;
+
+    padding: 10px 20px;
+
+    font-size: 17px;
+
+    text-align: center;
+
+    transition: all 100ms linear;
+}
+
+.produits .voir a:hover{
+    background-color: transparent;
+    color: black;
+}
+
+.produits h1{
+    width: 100%;
+
+    text-align: center;
+}

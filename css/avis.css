@@ -1,0 +1,83 @@
+.avis {
+    width: 100%;
+    
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.avis .title{
+    min-width: 100%;
+
+    font-size: 28px;
+    text-align: center;
+    
+    margin-bottom: 50px;
+}
+
+.avis .left{
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+.avis .left>div{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.avis .left>div>p:first-child{
+    font-size: 20px;
+}
+
+.avis .left>div>p:nth-child(2){
+    font-size: 10px;
+}
+
+.avis .left>div>p:last-child{
+    font-size: 15px;
+}
+
+.avis .left>div>p{
+    margin: 5px 0;
+}
+
+.avis .right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 15px 50px;
+
+    border-left: 2px solid black;
+}
+
+.avis .right .total{
+    align-self: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.avis .right .total>p{
+    margin: 8px 0;
+}
+
+.avis .right .total>p:first-child{
+    font-size: 24px;
+    font-weight: bolder;
+}
+
+.avis .right .total>p:last-child{
+    font-size: 14px;
+
+    color: rgb(53, 53, 53);
+
+    text-wrap: wrap;
+    text-align: center;
+
+    max-width: 200px;
+}
