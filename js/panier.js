@@ -93,9 +93,11 @@ function getTranslateX(e) {
 
 async function togglePanier(){
     const panier = document.querySelector("#panier");
+    const menu = document.querySelector("body nav");
     const fog = document.querySelector("#fog");
     if(getTranslateX(panier) === 1000){
         reloadPanier();
+        menu.style.transform = "translateX(-1000px)";
         panier.style.transform = "translateX(0)";
         fog.style.visibility = "visible";
         fog.style.opacity = "1";
@@ -115,7 +117,10 @@ async function init(){
     body.innerHTML += panierFogHtml;
     document.querySelector("header").innerHTML += panierHeaderHtml; 
 
-    document.querySelector("#fog").addEventListener("click", event => {if(getTranslateX(document.querySelector("#panier"))===0) togglePanier()})
+    document.querySelector("#fog").addEventListener("click", event => {
+        if(getTranslateX(document.querySelector("#panier"))===0) togglePanier()
+        if(getTranslateX(document.querySelector("body nav"))===0) toggleMenu()
+    });
 }
 
 if(panier != null){

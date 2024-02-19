@@ -8,11 +8,12 @@ function setAnnoncesBorder(){
 
 let annonces = document.querySelectorAll(".annonce");
 annonces.forEach( element => {
-    const cross = `<i class="fa-solid fa-xmark"></i>`;
+    const cross = `<i onclick="this.parentNode.style.display = 'none';setAnnoncesBorder();" class="fa-solid fa-xmark"></i>`;
     const space = `<i></i>`
     element.innerHTML = space  + element.innerHTML  + cross;
     setAnnoncesBorder();
 })
+
 
 const annoncesCross = document.querySelectorAll(".annonce>i:last-child");
 annoncesCross.forEach( element => {

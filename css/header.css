@@ -42,7 +42,7 @@ header p:hover{
     transition: all ease-in-out 200ms;
 }
 
-header i{
+header i:last-child{
     text-align: right;
     font-size: 35px;
 }
@@ -55,4 +55,92 @@ header i, header div{
 header div{
     display: flex;
     justify-content: space-around;
+}
+
+header i:first-child{
+    display: none;
+    font-size: 35px;
+}
+
+@media screen and (max-width:1000px){
+    header div{
+        display: none;
+    }
+
+
+    header i:first-child{
+        display: block;
+    }
+}
+
+nav{
+    width: 100%;
+    max-width: 400px;
+    height: 100vh;
+
+    z-index: 10;
+
+    position: fixed;
+
+    background-color: white;
+
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    transition: all ease-in-out 300ms;
+    transform: translateX(-1000px);
+}
+
+nav i, nav>p{
+    cursor: pointer;
+}
+
+nav h1{
+    width: 85%;
+    margin-bottom: 50px;
+    margin-top: 20px;
+
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 28px;
+}
+
+nav>p{
+    font-size: 20px;
+    border-top: solid 1px black;
+    margin: 0;
+    margin-top: 10px;
+    padding: 15px 60px;
+}
+
+nav i{
+    font-size: 30px;
+}
+
+nav>div{
+    width: 90%;
+    padding: 20px 5%;
+
+    background-color: rgb(251,248,244);
+
+    position: absolute;
+    bottom: 0;
+}
+
+nav>div p{
+    margin: 0;
+}
+
+nav>div p:nth-child(even){
+    cursor: pointer;
+    margin-top: 4px;
+}
+
+nav>div p:nth-child(odd){
+    margin-top: 15px;
+    font-size: 20px;
 }

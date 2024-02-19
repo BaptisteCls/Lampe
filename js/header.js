@@ -15,3 +15,20 @@ window.addEventListener("scroll", event => {
 });
 
 toggleHeaderColor();
+
+function toggleMenu(){
+    const menu = document.querySelector("body nav");
+    const fog = document.querySelector("#fog");
+    if(getTranslateX(menu) === -1000){
+        menu.style.transform = "translateX(0)";
+        fog.style.visibility = "visible";
+        fog.style.opacity = "1";
+        body.style.overflow = "hidden";
+    }
+    else{
+        menu.style.transform = "translateX(-1000px)";
+        fog.style.visibility = "hidden";
+        fog.style.opacity = "0";
+        body.style.overflow = "auto";
+    }
+}

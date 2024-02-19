@@ -7,8 +7,6 @@ body{
     inset: 0;
     margin: 0;
 
-    background-color: #c57e7e;
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,8 +30,7 @@ main{
 }
 
 
-@media screen and (max-width:1110px){
-}
+
 
 a{
     text-decoration: none;

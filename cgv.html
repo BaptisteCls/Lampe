@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/panier.css">
+    <link rel="stylesheet" href="./css/general.css">
+    
+    <title>Conseils general de ventes</title>
+
+    <script src="https://kit.fontawesome.com/c2507bb805.js" crossorigin="anonymous"></script>
+
+    <script src="js/panier.js" defer></script>
+    <script src="js/header.js" defer></script>
+</head>
+<body>
+    <div id="headContainer">
+        <header>
+            <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+            <div>
+                <p>Produits</p>
+                <p>L'histoire</p>
+                <p>Réseaux</p>
+            </div>
+            <img src="./img/logo.jpg" onclick="location.href = '/'">
+        </header>
+    </div>
+
+    <nav>
+        <h1>Menu <i onclick="toggleMenu()" class="fa-solid fa-xmark"></i></h1>
+        <p>Produits</p>
+        <p>L'histoire</p>
+        <p>Réseaux</p>
+        <div>
+            <p>Service client</p>
+            <p onclick="window.location=`mailto:${this.innerHTML}`">support@mail.com</p>
+            <p>Contact</p>
+            <p onclick="window.location=`mailto:${this.innerHTML}`">contact@mail.com</p>
+        </div>
+    </nav>
+    
+    <main>
+        <div class="black"></div>
+
+        <h1>Conditions générales de vente</h1>
+
+        <h2 class="separate">Caractéristiques essentielles des biens</h2>
+        <p class="justify">
+            Les caractéristiques essentielles de nos produits sont détaillées sur la page de chaque article de notre site. Pour toute information complémentaire, n'hésitez pas à nous contacter.
+        </p>
+
+        <h2 class="separate">Prix</h2>
+        <p class="justify">
+            Tous nos prix sont indiqués en euros et incluent toutes les taxes applicables (TTC) sur la page de chaque article de notre site.
+        </p>
+
+        <h2 class="separate">Frais, date et modalités de livraison</h2>
+        <p class="justify">
+            Les frais de livraison sont calculés lors du processus de commande et dépendent de la destination. La date de livraison estimée est spécifiée au moment de la commande. Pour plus de détails, veuillez consulter notre page "Livraison".
+        </p>
+
+        <h2 class="separate">Modalités d'exécution du contrat</h2>
+        <p class="justify">
+            Les détails concernant l'exécution du contrat sont spécifiés sur la page de chaque produit et peuvent varier en fonction de la nature du bien. 
+        </p>
+
+        <h2 class="separate">Modalités de paiement</h2>
+        <p class="justify">
+            Les modes de paiement autorisés sont indiqués lors du processus de commande. En cas de retard de paiement, des pénalités peuvent être appliquées conformément aux dispositions légales. Pour plus de détails, veuillez consulter notre page "Paiement".
+        </p>
+
+        <h2 class="separate">Droit de rétractation</h2>
+        <p class="justify">
+            Conformément à la législation en vigueur, le client dispose d'un délai de 14 jours à compter de la réception des biens pour exercer son droit de rétractation, les frais de renvois sont à la charge de l'acheteur. Pour toute information complémentaire ou pour exercer ce droit, n'hésitez pas à nous contacter.
+        </p>
+
+        <h2 class="separate">Garantie légale de conformité et garantie des vices cachés</h2>
+        <p class="justify">
+            Nous nous conformons aux garanties légales de conformité et contre les vices cachés telles que définies par la loi.
+        </p>
+
+        <h2 class="separate">Garantie commerciale et service après-vente</h2>
+        <p class="justify">
+            Les informations concernant la garantie commerciale et le service après-vente sont disponibles sur notre site. Les coûts de communication à distance pour contacter notre service après-vente sont à la charge du client.
+        </p>
+
+        <h2 class="separate">Modalités de règlement des litiges</h2>
+        <p class="justify">
+            En cas de litige, le tribunal compétent est le tribunal judiciaire. Les clients ont également la possibilité de recourir à un médiateur conformément aux dispositions légales en vigueur. Informations sur <a href="https://entreprendre.service-public.fr/vosdroits/R48100">https://entreprendre.service-public.fr/vosdroits/R48100</a>
+        </p>
+    </main>
+
+    <footer>
+        <div class="reseaux">
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-tiktok"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-square-pinterest"></i>
+        </div>
+
+
+        <div class="listes">
+            <ul>
+                <li>Découvrez-nous</li>
+                <li>Qui sommes-nous</li>
+                <li>L'histoire</li>
+            </ul>
+
+            <ul>
+                <li>Livraison & paiement</li>
+                <li>Paiement</li>
+                <li>Livraison</li>
+            </ul>
+
+            <ul>
+                <li>Infos pratiques</li>
+                <li>Conseils & entretien</li>
+                <li>Professionnels</li>
+                <li style="display: none;">FAQ</li>
+                <li>CGV</li>
+                <li><a href="mentions.html">Mentions légales</a></li>
+            </ul>
+
+            <ul>
+                <li>Nous contacter</li>
+                <li>Service client</li>
+                <li onclick="window.location=`mailto:${this.innerHTML}`">support@mail.com</li>
+                <li>Contact</li>
+                <li onclick="window.location=`mailto:${this.innerHTML}`">contact@mail.com</li>
+            </ul>
+        </div>
+
+
+        <img src="./img/logo.jpg" alt=""logo>
+    </footer>
+
+    <div id="panier">
+
+        
+
+    </div>
+
+</body>
+</html>

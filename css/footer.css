@@ -43,7 +43,22 @@ footer .listes li{
     padding: 10px 0;
 }
 
-footer .listes ul>li:not(:first-child){
+footer .listes ul>li:not(:first-child), footer .listes a{
     color: #777;
     cursor: pointer;
+}
+
+@media screen and (max-width: 1000px) {
+    footer .listes>ul:first-child, footer .listes>ul:last-child{
+        display: none;
+    }
+    
+    footer .listes{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .reseaux, footer .listes{
+        min-width: 300px;
+    }
 }

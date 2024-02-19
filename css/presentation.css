@@ -1,5 +1,6 @@
 .presentation{
     width: 40%;
+    min-width: 300px;
 
     padding: 120px 30%;
 
@@ -15,7 +16,7 @@
 
 .presentation a{
     margin-top: 30px;
-    padding: 12px 25px;
+    padding: 10px 25px;
 
     background-color: black;
 

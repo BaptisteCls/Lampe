@@ -23,9 +23,10 @@
     <script src="https://kit.fontawesome.com/c2507bb805.js" crossorigin="anonymous"></script>
 
     
-    <script src="js/header.js" defer></script>
+    
     <script src="js/panier.js" defer></script>
     <script src="js/annonce.js" defer></script>
+    <script src="js/header.js" defer></script>
 </head>
 <body>
     <div id="headContainer">
@@ -33,14 +34,28 @@
         <div class="annonce">-20% sur tout le site</div>
         <div class="annonce">-20% sur tout le site</div>
         <header>
+            <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
             <div>
                 <p>Produits</p>
                 <p>L'histoire</p>
                 <p>Réseaux</p>
             </div>
-            <img src="./img/logo.jpg" onclick="location.href = ''">
+            <img src="./img/logo.jpg" onclick="location.href = '/'">
         </header>
     </div>
+
+    <nav>
+        <h1>Menu <i onclick="toggleMenu()" class="fa-solid fa-xmark"></i></h1>
+        <p>Produits</p>
+        <p>L'histoire</p>
+        <p>Réseaux</p>
+        <div>
+            <p>Service client</p>
+            <p onclick="window.location=`mailto:${this.innerHTML}`">support@mail.com</p>
+            <p>Contact</p>
+            <p onclick="window.location=`mailto:${this.innerHTML}`">contact@mail.com</p>
+        </div>
+    </nav>
     
     <main>
         <div class="bigPicture">
@@ -79,14 +94,18 @@
 
         <div class="avant">
             <div class="divided">
-                <img src="./img/logo.jpg" alt="">
                 <div class="content">
                     <h2>abbabab</h2>
                     <p>zdizhdizuehdizeohdozehdioze zdizhdizuehdizeohdozehdioze zdizhdizuehdizeohdozehdioze zdizhdizuehdizeohdozehdioze zdizhdizuehdizeohdozehdioze zdizhdizuehdizeohdozehdioze zdizhdizuehdizeohdozehdioze</p>
                 </div>
+                <img src="./img/logo.jpg" alt="">
             </div>
 
-            <div></div>
+            <div class="mini">
+                <img src="./img/logo.jpg" alt="">
+                <h1>Testetetsttetetets</h1>
+                <img src="./img/logo.jpg" alt="">
+            </div>
 
             <div class="divided">
                 <img src="./img/logo.jpg" alt="">
@@ -107,18 +126,18 @@
                     <p>Excellent service client! Achetez en toute confiance !</p>
                 </div>
                 <div>
-                    <p>Jocelyn</p>
+                    <p>Malcolm</p>
                     <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
-                    <p>Excellent service client! Achetez en toute confiance !</p>
+                    <p>Vendeur génial. Gardez la communication. Dans l'ensemble, une grande expérience</p>
                 </div>
             </div>
         
 
             <div class="right">
                 <div class="total">
-                    <p>4.8/5</p>
+                    <p>4.9/5</p>
                     <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
-                    <p>Moyenne de 17 avis venant de notre boutique Etsy.com</p>
+                    <p>Moyenne de 22 avis venant de notre boutique Etsy.com</p>
                 </div>
 
                 <a href="">Visiter la boutique Etsy <i class="fa-solid fa-arrow-right"></i></a>
@@ -145,17 +164,17 @@
 
             <ul>
                 <li>Livraison & paiement</li>
-                <li>Modes de paiement</li>
-                <li>Modes de livraison</li>
+                <li>Paiement</li>
+                <li>Livraison</li>
             </ul>
 
             <ul>
                 <li>Infos pratiques</li>
                 <li>Conseils & entretien</li>
                 <li>Professionnels</li>
-                <li>FAQ</li>
+                <li style="display: none;">FAQ</li>
                 <li>CGV</li>
-                <li>Mentions légales</li>
+                <li><a href="mentions.html">Mentions légales</a></li>
             </ul>
 
             <ul>

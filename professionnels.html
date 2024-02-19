@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/panier.css">
+    <link rel="stylesheet" href="./css/general.css">
+    
+    <title>Professionnels</title>
+
+    <script src="https://kit.fontawesome.com/c2507bb805.js" crossorigin="anonymous"></script>
+
+    <script src="js/panier.js" defer></script>
+    <script src="js/header.js" defer></script>
+</head>
+<body>
+    <div id="headContainer">
+        <header>
+            <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+            <div>
+                <p>Produits</p>
+                <p>L'histoire</p>
+                <p>Réseaux</p>
+            </div>
+            <img src="./img/logo.jpg" onclick="location.href = '/'">
+        </header>
+    </div>
+
+    <nav>
+        <h1>Menu <i onclick="toggleMenu()" class="fa-solid fa-xmark"></i></h1>
+        <p>Produits</p>
+        <p>L'histoire</p>
+        <p>Réseaux</p>
+        <div>
+            <p>Service client</p>
+            <p onclick="window.location=`mailto:${this.innerHTML}`">support@mail.com</p>
+            <p>Contact</p>
+            <p onclick="window.location=`mailto:${this.innerHTML}`">contact@mail.com</p>
+        </div>
+    </nav>
+    
+    <main>
+        <div class="black"></div>
+
+        <h1>Professionnels : Éclairez vos Espaces avec Lychna</h1>
+        <p class="justify">
+            Bienvenue sur notre page dédiée aux professionnels ! Chez Lychna, nous comprenons les exigences uniques des environnements professionnels en matière d'éclairage. Découvrez comment nos solutions d'éclairage imprimé peuvent répondre à vos besoins spécifiques tout en apportant une touche esthétique à vos espaces.
+        </p>
+
+        <h2 class="separate">Pourquoi Choisir Lychna pour Vos Projets Professionnels ?</h2>
+        <h3>Qualité Exceptionnelle</h3>
+        <p class="justify">
+            Nos lampes en écologiques imprimé offrent une qualité exceptionnelle alliée à un design distinctif. Chaque pièce est soigneusement conçue pour apporter une esthétique moderne tout en assurant une fonctionnalité optimale.
+        </p>
+
+        <h3 class="separate">Personnalisation </h3>
+        <p class="justify">
+            Nous comprenons que chaque espace professionnel a des besoins uniques. C'est pourquoi nous offrons des solutions personnalisées pour répondre à vos exigences spécifiques en matière de design et de fonctionnalité.
+        </p>
+
+        <h3 class="separate">Tarifs Professionnels Avantageux</h3>
+        <p class="justify">
+            Profitez de tarifs professionnels compétitifs pour équiper vos bureaux, salles de réunion, halls d'accueil, et autres espaces professionnels. Contactez-nous pour discuter de vos besoins spécifiques et recevoir une offre sur mesure.
+        </p>
+
+        <h2 class="separate">Comment Collaborer avec Lychna ?</h2>
+        <p class="justify">
+            Notre équipe dédiée aux professionnels est là pour répondre à toutes vos questions et vous accompagner tout au long du processus. <br>
+            Contactez nous simplement et nous serons revis de répondre à vos demandes.
+        </p>
+
+        <h3 class="separate"></h3>
+        <p class="justify">
+            Que vous soyez un architecte, un designer d'intérieur, ou un professionnel de la gestion de projet, Lychna est votre partenaire idéal pour éclairer vos espaces professionnels de manière innovante et élégante. Contactez-nous dès aujourd'hui pour commencer votre projet d'éclairage sur mesure.
+        </p>
+    </main>
+
+    <footer>
+        <div class="reseaux">
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-tiktok"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-square-pinterest"></i>
+        </div>
+
+
+        <div class="listes">
+            <ul>
+                <li>Découvrez-nous</li>
+                <li>Qui sommes-nous</li>
+                <li>L'histoire</li>
+            </ul>
+
+            <ul>
+                <li>Livraison & paiement</li>
+                <li>Paiement</li>
+                <li>Livraison</li>
+            </ul>
+
+            <ul>
+                <li>Infos pratiques</li>
+                <li>Conseils & entretien</li>
+                <li>Professionnels</li>
+                <li style="display: none;">FAQ</li>
+                <li>CGV</li>
+                <li><a href="mentions.html">Mentions légales</a></li>
+            </ul>
+
+            <ul>
+                <li>Nous contacter</li>
+                <li>Service client</li>
+                <li onclick="window.location=`mailto:${this.innerHTML}`">support@mail.com</li>
+                <li>Contact</li>
+                <li onclick="window.location=`mailto:${this.innerHTML}`">contact@mail.com</li>
+            </ul>
+        </div>
+
+
+        <img src="./img/logo.jpg" alt=""logo>
+    </footer>
+
+    <div id="panier">
+
+        
+
+    </div>
+
+</body>
+</html>
