@@ -32,15 +32,17 @@ function clearPanier(panier){
 
 
 function panierItemToHtml(item){
+    let minus = "trash-can";
+    if(item.number>1) minus = "minus";
     return `
             <div class="article" name="item=${item.id}&color=${item.color}">
                 <img src="${item.image}" alt="">
                 <div class="infos">
                     <p class="title">${item.name}</p>
                     <p>Couleur : ${item.color}</p>
-                    <p>Prix unitaire : ${item.price} €</p>
+                    <p>Prix unitaire : ${`${item.price}`.replace(".",",")} €</p>
                     <div class="number">
-                        <i class="fa-solid fa-minus" onclick="decrement(this)"></i>
+                        <i class="fa-solid fa-${minus}" onclick="decrement(this)"></i>
                         <p>${item.number}</p>
                         <i class="fa-solid fa-plus" onclick="increment(this)"></i>
                     </div>
@@ -77,12 +79,16 @@ async function decrement(i){
         item.parentNode.removeChild(item);
         reloadPanierIsVide();
     }
+    if(number==2) i.setAttribute("class", "fa-solid fa-trash-can");
 }
 
 async function increment(i){
     item = i.parentNode.parentNode.parentNode;
     await fetch(`/Lampe/addToPanier?${item.getAttribute("name")}`);
     i.parentNode.childNodes[3].innerHTML = parseInt(i.parentNode.childNodes[3].innerHTML) +1;
+    i.parentNode.querySelectorAll(".fa-trash-can").forEach(element =>{
+        element.setAttribute("class", "fa-solid fa-minus");
+    })
 }
 
 function getTranslateX(e) {

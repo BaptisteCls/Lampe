@@ -11,7 +11,6 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import utils.Database;
 import utils.SessionManager;
-import utils.Test;
 
 
 @WebServlet("/addToPanier")

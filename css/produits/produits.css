@@ -1,14 +1,11 @@
 .produits{
-    width: 80%;
-    padding: 0 10%;
-    margin-top: 50px;
+    width: 90%;
+    margin-top: 20px;
 
     display: flex;
     justify-content: center;
     gap: 6%;
     flex-wrap: wrap;
-
-    background-color: #f5f5f5;
 }
 
 .produit{
@@ -69,7 +66,7 @@
     width: 100%;
     height: 70px;
 
-    backdrop-filter: blur(6px);
+    backdrop-filter: blur(25px);
 
     justify-content: center;
     align-items: center;
@@ -95,39 +92,20 @@
 }
 
 .produits .voir{
-    width: 100%;
-
-    margin: 40px 0;
-
-    display: flex;
-    justify-content: center;
-}
-
-.produits .voir a{
-    cursor: pointer;
-
-    border: solid 3px black;
-    border-radius: 20px;
-
-    background-color: black;
-    color: white;
-
-    padding: 10px 20px;
-
-    font-size: 17px;
-
-    text-align: center;
-
-    transition: all 100ms linear;
-}
-
-.produits .voir a:hover{
-    background-color: transparent;
-    color: black;
+    display: none;
 }
 
 .produits h1{
-    width: 100%;
+    min-width: 360px;
+    max-width: 360px;
+
+    margin: 30px 50%;
+    padding-bottom: 20px;
+
+    border-bottom: solid 1.5px rgb(26, 26, 26);
 
     text-align: center;
+    justify-self: left;
+
+    font-size: 48px;
 }

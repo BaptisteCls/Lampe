@@ -9,7 +9,7 @@ import utils.Database;
 import utils.SessionManager;
 import jakarta.servlet.annotation.WebServlet;
 
-@WebServlet("/authent")
+//@WebServlet("/authent")
 public class Authent extends HttpServlet{
   public void doPost( HttpServletRequest req, HttpServletResponse res ) 
   throws ServletException, IOException{

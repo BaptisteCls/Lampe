@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/panier.css">
+    <link rel="stylesheet" href="./css/general.css">
+    
+    <title>Livraison</title>
+
+    <script src="https://kit.fontawesome.com/c2507bb805.js" crossorigin="anonymous"></script>
+
+    <script src="js/panier.js" defer></script>
+    <script src="js/header.js" defer></script>
+</head>
+<body>
+    <div id="headContainer">
+        <header>
+            <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+            <div>
+                <p>Produits</p>
+                <p>L'histoire</p>
+                <p>Réseaux</p>
+            </div>
+            <img src="./img/logo.jpg" onclick="location.href = '/'">
+        </header>
+    </div>
+
+    <nav>
+        <h1>Menu <i onclick="toggleMenu()" class="fa-solid fa-xmark"></i></h1>
+        <p>Produits</p>
+        <p>L'histoire</p>
+        <p>Réseaux</p>
+        <div>
+            <p>Service client</p>
+            <p onclick="window.location=`mailto:${this.innerHTML}`">support@mail.com</p>
+            <p>Contact</p>
+            <p onclick="window.location=`mailto:${this.innerHTML}`">contact@mail.com</p>
+        </div>
+    </nav>
+    
+    <main>
+        <div class="black"></div>
+
+        <h1>LIVRAISON</h1>
+        <p class="justify">
+            Bienvenue sur notre page dédiée à la livraison ! Chez Lychna, nous nous engageons à assurer une expérience de livraison
+             transparente et fiable pour tous nos clients. Découvrez les détails de notre processus de livraison pour que vous
+             soyez informé et rassuré à chaque étape.
+        </p>
+
+        <h2 class="separate">Options de Livraison</h2>
+        <h3>Livraison Standard</h3>
+        <p class="justify">
+            <ul>
+                <ol><strong>Transporteur :</strong>Nos produits vous seront normalement livrés à domicile, via un service en lien avec La Poste</ol>
+                <ol><strong>Délai :</strong>Les délais de livraison peuvent être variables et sont indiqués au moment de la validation du panier</ol>
+                <ol><strong>Frais :</strong>Nous avons à coeur chez Lychna de vous proposer la livraison gratuite, hors contre-indication la livraison restera normalement gratuite.</ol>
+            </ul>
+        </p>
+
+        <h2 class="separate">Processus de Livraison</h2>
+        <p class="justify">
+            <ul>
+                <ol><strong>Confirmation :</strong>Dès que votre commande est confirmée, vous recevrez un e-mail de confirmation comprenant les détails de votre achat.</ol>
+                <ol><strong>Réception :</strong>À la réception de votre colis, assurez-vous de vérifier son état. Si vous constatez des dommages, veuillez nous contacter immédiatement.</ol>
+            </ul>
+        </p>
+
+        <h2 class="separate">Zones de Livraison</h2>
+        <p class="justify">
+            Nous ne livrons actuellement que dans la France Métropolitaine, mais nous travaillons activement à vous proposer d'avantages de zones de livraison. 
+        </p>
+
+        <h2 class="separate">Assistance Clientèle</h2>
+        <p class="justify">
+            Notre équipe d'assistance clientèle est là pour répondre à toutes vos questions concernant la livraison. N'hésitez pas à nous contacter à <strong>MAIL</strong>. <br><br>
+
+            Chez Lychna, nous nous efforçons de rendre votre expérience d'achat aussi agréable que possible. Merci de faire confiance à nos services de livraison !
+        </p>
+
+    </main>
+
+    <footer>
+        <div class="reseaux">
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-tiktok"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-square-pinterest"></i>
+        </div>
+
+
+        <div class="listes">
+            <ul>
+                <li>Découvrez-nous</li>
+                <li>Qui sommes-nous</li>
+                <li>L'histoire</li>
+            </ul>
+
+            <ul>
+                <li>Livraison & paiement</li>
+                <li>Paiement</li>
+                <li>Livraison</li>
+            </ul>
+
+            <ul>
+                <li>Infos pratiques</li>
+                <li>Conseils & entretien</li>
+                <li>Professionnels</li>
+                <li style="display: none;">FAQ</li>
+                <li>CGV</li>
+                <li><a href="mentions.html">Mentions légales</a></li>
+            </ul>
+
+            <ul>
+                <li>Nous contacter</li>
+                <li>Service client</li>
+                <li onclick="window.location=`mailto:${this.innerHTML}`">support@mail.com</li>
+                <li>Contact</li>
+                <li onclick="window.location=`mailto:${this.innerHTML}`">contact@mail.com</li>
+            </ul>
+        </div>
+
+
+        <img src="./img/logo.jpg" alt=""logo>
+    </footer>
+
+    <div id="panier">
+
+        
+
+    </div>
+
+</body>
+</html>
