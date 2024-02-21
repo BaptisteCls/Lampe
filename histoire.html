@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/panier.css">
+    <link rel="stylesheet" href="./css/produits/picture.css">
+
+    <title>Histoire</title>
+
+    <script src="https://kit.fontawesome.com/c2507bb805.js" crossorigin="anonymous"></script>
+    
+    <script src="js/panier.js" defer></script>
+    <script src="js/annonce.js" defer></script>
+    <script src="js/header.js" defer></script>
+    <script src="js/produits.js" defer></script>
+</head>
+<body>
+    <div id="headContainer">
+        <div class="annonce">-20% sur tout le site</div>
+        <header>
+            <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+            <div>
+                <p>Produits</p>
+                <p>L'histoire</p>
+                <p>Réseaux</p>
+            </div>
+            <img src="./img/logo.jpg" onclick="location.href = '/'">
+        </header>
+    </div>
+
+    <nav>
+        <h1>Menu <i onclick="toggleMenu()" class="fa-solid fa-xmark"></i></h1>
+        <p>Produits</p>
+        <p>L'histoire</p>
+        <p>Réseaux</p>
+        <div>
+            <p>Service client</p>
+            <p onclick="window.location=`mailto:${this.innerHTML}`">support@mail.com</p>
+            <p>Contact</p>
+            <p onclick="window.location=`mailto:${this.innerHTML}`">contact@mail.com</p>
+        </div>
+    </nav>
+    
+    <main>
+        <div class="picture"></div>
+        <div>
+
+            <div class="part">
+                <i class="fa-solid fa-location-dot"></i>
+                <div class="content">
+                    <h2>Une marque locale</h2>
+                    <p>Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla </p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+
+    <footer>
+        <div class="reseaux">
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-tiktok"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-square-pinterest"></i>
+        </div>
+
+
+        <div class="listes">
+            <ul>
+                <li>Navigation</li>
+                <li>Accueil</li>
+                <li>Produits</li>
+                <li>L'histoire</li>
+                <li>Réseaux</li>
+            </ul>
+
+            <ul>
+                <li>Livraison & paiement</li>
+                <li>Paiement</li>
+                <li>Livraison</li>
+            </ul>
+
+            <ul>
+                <li>Infos pratiques</li>
+                <li>Conseils & entretien</li>
+                <li>Professionnels</li>
+                <li style="display: none;">FAQ</li>
+                <li>CGV</li>
+                <li><a href="mentions.html">Mentions légales</a></li>
+            </ul>
+
+            <ul>
+                <li>Nous contacter</li>
+                <li>Service client</li>
+                <li onclick="window.location=`mailto:${this.innerHTML}`">support@mail.com</li>
+                <li>Contact</li>
+                <li onclick="window.location=`mailto:${this.innerHTML}`">contact@mail.com</li>
+            </ul>
+        </div>
+
+
+        <img src="./img/logo.jpg" alt=""logo>
+    </footer>
+
+    <div id="panier">
+
+        
+
+    </div>
+
+</body>
+</html>
