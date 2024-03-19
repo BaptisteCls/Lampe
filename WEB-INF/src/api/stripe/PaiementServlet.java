@@ -15,7 +15,9 @@ import java.io.PrintWriter;
 @WebServlet("/paiement/effectuerPaiement")
 public class PaiementServlet extends HttpServlet {
 
-    private static final String STRIPE_SECRET_KEY = "sk_live_51OieqRJ3WYZv8x074TLkB1j5ectr";
+    private static final String STRIPE_SECRET_KEY = "";
+    
+    //sk_live_51OieqRJ3WYZv8x074TLkB1j5ectr
     
     //H9L9ul3wLaeScgDpX0nzR8wTPGKD4KSkuXSvJtDebaygtfPqcj8nE0nuDqBk006ggfphoa";
 
