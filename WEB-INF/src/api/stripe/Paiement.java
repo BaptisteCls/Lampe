@@ -1,3 +1,5 @@
+package api.stripe;
+
 public class Paiement {
     String stripeToken;
     int montant;

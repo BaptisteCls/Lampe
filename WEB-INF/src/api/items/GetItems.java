@@ -2,19 +2,12 @@ package api.items;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
-import java.util.ArrayList;
 import java.util.List;
 
 import com.google.gson.Gson;
 
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
-import utils.Database;
-import utils.Test;
 import jakarta.servlet.annotation.WebServlet;
 
 @WebServlet("/getItems/*")

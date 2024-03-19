@@ -11,7 +11,7 @@ import utils.Database;
 
 public class DAOItemsDatabase {
     public static Item getItem(int id){
-        try (Connection con = new Database().getConnection("website")) {
+        try (Connection con = Database.getConnection("website")) {
             String query = "SELECT * FROM items WHERE ino = ?";
             PreparedStatement stmt = con.prepareStatement(query);
             stmt.setInt(1, id);
@@ -49,7 +49,7 @@ public class DAOItemsDatabase {
 
     public static List<Item> getAll(){
         List<Item> result = new ArrayList<>();
-        try (Connection con = new Database().getConnection("website")) {
+        try (Connection con = Database.getConnection("website")) {
             
             String query = "Select ino from items";
             Statement stmt = con.createStatement();

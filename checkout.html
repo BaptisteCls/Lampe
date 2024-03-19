@@ -21,6 +21,8 @@
     <script src="./js/checkout/category.js" defer></script>
     <script src="./js/checkout/send.js" defer></script>
     <script src="./js/checkout/estimate.js" defer></script>
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="./js/checkout/stripe.js"></script>
 </head>
 <body>
     <header>
@@ -136,7 +138,18 @@
             </div>
             <div class="cat"><p><i class="fa-solid fa-credit-card"></i>4. Paiement</p></div>
             <div class="part">
+                <form id="payment-form">
+                    <div>
+                        <label for="card-holder-name">Nom du titulaire</label>
+                        <input id="card-holder-name" type="text">
+                    </div>
+                    <div>
+                        <label for="card-element">Informations de la carte</label>
+                        <div id="card-element"><!-- Stripe.js injecte les éléments de carte --></div>
+                    </div>
                 
+                    <button type="submit">Payer</button>
+                </form>
             </div>
         </div>
     </main>

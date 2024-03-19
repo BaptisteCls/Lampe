@@ -7,7 +7,6 @@ import jakarta.servlet.*;
 import jakarta.servlet.http.*;
 import utils.Database;
 import utils.SessionManager;
-import jakarta.servlet.annotation.WebServlet;
 
 //@WebServlet("/authent")
 public class Authent extends HttpServlet{
