@@ -25,6 +25,9 @@ async function initProduits(){
                 addToProduits(produitToHtml(produit));
             });
         })
+    for(let cpt = 0; cpt < document.querySelector('.produits').childNodes.length % 4; cpt++){
+        addToProduits("<i></i>")
+    }
     addToProduits(`
         <div class="voir">
             <a href="">Voir tout les produit</a>

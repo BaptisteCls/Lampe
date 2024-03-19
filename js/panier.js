@@ -6,7 +6,7 @@ const panierTitleHtml = `
 const panierButtonsHtml = `
 <div class="buttons">
     <button onclick="togglePanier()">Continuer mon shopping</button>
-    <button>Finaliser mon panier</button>
+    <button onclick="location.href='checkout.html'">Finaliser mon panier</button>
 </div>
 `;
 
