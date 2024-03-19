@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulaire de paiement</title>
+    <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+
+<form id="payment-form">
+    <div>
+        <label for="card-holder-name">Nom du titulaire de la carte</label>
+        <input id="card-holder-name" type="text">
+    </div>
+    <div>
+        <label for="card-element">Informations de la carte</label>
+        <div id="card-element"><!-- Stripe.js injecte les éléments de carte --></div>
+    </div>
+
+    <button type="submit">Payer</button>
+</form>
+
+<script>
+    // Configuration de Stripe.js avec votre clé publique
+    var stripe = Stripe('pk_live_51OieqRJ3WYZv8x07PfQncGPaXElwtouGwmREa88cLKAQDiiuf7p6Fa1juFZb3sNuRqJqwI3lZBblXCECL88rvYly00XdJdtFFf');
+
+    // Création d'un élément de carte
+    var elements = stripe.elements();
+    var cardElement = elements.create('card');
+
+    // Montrez les erreurs de validation dans le div #card-errors
+    cardElement.mount('#card-element');
+
+    // Gestion de la soumission du formulaire
+    var form = document.getElementById('payment-form');
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        // Création d'un token avec les informations de carte saisies
+        stripe.createToken(cardElement, {
+            name: document.getElementById('card-holder-name').value
+        }).then(function(result) {
+            if (result.error) {
+                // Affichage des erreurs à l'utilisateur
+                console.error(result.error.message);
+            } else {
+                console.log(result.token.id)
+                // Envoi du token à votre backend pour le traitement du paiement
+                fetch('/Stripe/paiement/effectuerPaiement', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        stripeToken: result.token.id,
+                        montant: 50,/* récupérez le montant à payer depuis votre formulaire */
+                    }),
+                })
+                .then(function(response) {
+                    return response.json();
+                })
+                .then(function(data) {
+                    console.log(data); // Traitez la réponse du serveur
+                })
+                .catch(function(error) {
+                    console.error('Erreur lors de l\'envoi du token Stripe au serveur:', error);
+                });
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

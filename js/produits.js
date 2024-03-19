@@ -6,7 +6,7 @@ function addToProduits(html){
 function produitToHtml(produit){
     return `
         <div class="produit">
-            <div class="container" style="background-image: url(${produit.image});">
+            <div class="container" style="background-image: url(${produit.image[0]});">
                 <div class="btn"><a href="${produit.id}">Ajouter au panier</a></div>
             </div>
             <div class="text">
