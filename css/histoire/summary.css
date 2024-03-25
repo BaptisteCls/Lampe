@@ -1,0 +1,64 @@
+.summary{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+}
+
+.summary:where(p,h1){
+    text-align: center;
+}
+
+.summary>div{
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+
+    background-image: url("../../img/summaryLigneFull.png");
+    background-repeat: no-repeat;
+    background-clip: content-box;
+    background-size: 50% 94px;
+}
+
+.summary>div>a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    width: 135px;
+}
+
+.summary>div>a:not(.summary>div>a:last-child){
+    background-image: url("../../img/summaryLigneFull.png");
+}
+
+.summary>div>a:last-child{
+    background-image: url("../../img/summaryLigneLeft.png");
+    background-repeat: no-repeat;
+}
+
+.summary>div>a p{
+    text-align: center;
+}
+
+.summary>div>a>i{
+    color: darksalmon;
+    background-color: white;
+
+    border: 2px solid darksalmon;
+    border-radius: 100%;
+
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.summary>div>a>i:hover{
+    background-color: darksalmon;
+    color: white;
+}

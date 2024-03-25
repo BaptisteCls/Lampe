@@ -1,9 +1,0 @@
-main>div:nth-child(2){
-    width: 90%;
-    max-width: 900px;
-    background-color: aqua;
-}
-
-.part{
-    width: 100%;
-}
