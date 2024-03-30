@@ -1,0 +1,101 @@
+.made-in-france{
+    width: 100%;
+
+    display: flex;
+
+    background-color: rgb(255, 233, 226);
+}
+
+.made-in-france>div:first-child{
+    width: clamp(60%,60%,60%);
+}
+
+.made-in-france>div:last-child{
+    width: clamp(40%,40%,40%);
+}
+
+.made-in-france .right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+
+    background-color: rgb(174, 240, 199);
+}
+
+.made-in-france .right h1{
+    font-weight: bolder;
+    font-size: 26px;
+
+    color: white;
+}
+
+.made-in-france .right:where(h1,a,p){
+    z-index: 2;
+}
+
+.made-in-france .right a{
+    background-color: white;
+
+    padding: 11px 45px;
+
+    border: solid 2px white;
+    border-radius: 20px;
+
+    font-weight: 600;
+
+    transition: all .2s ease-in-out;
+}
+
+.made-in-france .right a:hover{
+    background-color: transparent;
+}
+
+.made-in-france .left{
+    display: flex;
+    justify-content: space-around;
+
+    padding: 60px 0;
+}
+
+.made-in-france .left>div{
+    background-color: white;
+
+    max-width: 40%;
+
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.made-in-france .left>div p{
+    width: 100%;
+
+    margin: 20px 0;
+    padding: 0;
+
+    text-align: center;
+
+    z-index: 2;
+}
+
+.made-in-france img{
+    max-width: 100%;
+}
+
+.made-in-france .circle2{
+    border-radius: 50%;
+
+    width: 180px;
+    height: 180px; 
+
+    background-color: rgb(198, 247, 217);
+
+    position: absolute;
+    right: 0;
+    bottom: -1400px;
+
+    z-index: 3;
+}

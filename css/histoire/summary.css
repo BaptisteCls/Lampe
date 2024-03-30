@@ -58,7 +58,8 @@
     justify-content: center;
 }
 
-.summary>div>a>i:hover{
+.summary>div>a:hover>i{
     background-color: darksalmon;
     color: white;
 }
+
