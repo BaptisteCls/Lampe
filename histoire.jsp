@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,18 +30,7 @@
     <script src="js/histoire.js" defer></script>
 </head>
 <body>
-    <div id="headContainer">
-        <div class="annonce">-20% sur tout le site</div>
-        <header>
-            <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
-            <div>
-                <p>Produits</p>
-                <p>L'histoire</p>
-                <p>Réseaux</p>
-            </div>
-            <img src="./img/logo.jpg" onclick="location.href = '/'">
-        </header>
-    </div>
+    <%@ include file="header.html" %>
 
     <nav>
         <h1>Menu <i onclick="toggleMenu()" class="fa-solid fa-xmark"></i></h1>
@@ -48,9 +39,9 @@
         <p>Réseaux</p>
         <div>
             <p>Service client</p>
-            <p onclick="window.location=`mailto:${this.innerHTML}`">support@mail.com</p>
+            <p onclick="window.location=`mailto:${innerHTML}`">support@mail.com</p>
             <p>Contact</p>
-            <p onclick="window.location=`mailto:${this.innerHTML}`">contact@mail.com</p>
+            <p onclick="window.location=`mailto:${innerHTML}`">contact@mail.com</p>
         </div>
     </nav>
     
@@ -74,11 +65,11 @@
                     <i class="fa-solid fa-location-dot"></i>
                     <p>Made in France</p>
                 </a>
-                <a href="">
+                <a href="#qualitee">
                     <i class="fa-solid fa-star"></i>
                     <p>Qualitée</p>
                 </a>
-                <a href="">
+                <a href="#marque-jeune">
                     <i class="fa-solid fa-seedling"></i>
                     <p>Marque jeune</p>
                 </a>
@@ -156,6 +147,11 @@
                 <div class="circle1"></div>
             </div>
             <div class="right">
+                <div class="ligneBox">
+                    <i></i>
+                    <i class="middle"></i>
+                    <i class="end"></i>
+                </div>
                 <h1>Made in France</h1>
                 <p>Texte</p>
                 <a href="">Bouton</a>
@@ -163,8 +159,65 @@
             </div>
         </section>
 
-        <section>
+        
 
+        <section id="qualitee" class="écologie">
+            <strong>
+                <i></i>
+                <h1>Qualitée</h1>
+                <i></i>
+            </strong>
+
+            <div>
+                <div class="right">
+                    <div>
+                        <img src="./img/logo.jpg" alt="">
+                        <p>Texte</p>
+                    </div>
+                    <div>
+                        <img src="./img/logo.jpg" alt="">
+                        <p>Texte</p>
+                    </div>
+                </div>
+                <div class="left">
+                    <img src="./img/logo.jpg" alt="">
+                    <div>
+                        <h2>Text</h2>
+                        <p>Text</p>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        <section id="marque-jeune" class="innovation">
+            <strong>
+                <i></i>
+                <h1>Marque jeune</h1>
+                <i></i>
+            </strong>
+
+            <div>
+                <div>
+                    <img src="./img/logo.jpg" alt="">
+                    <p>text</p>
+                </div>
+                <div>
+                    <img src="./img/logo.jpg" alt="">
+                    <p>text</p>
+                </div>
+                <div>
+                    <img src="./img/logo.jpg" alt="">
+                    <p>text</p>
+                </div>
+                <div>
+                    <img src="./img/logo.jpg" alt="">
+                    <p>text</p>
+                </div>
+            </div>
+
+            <div class="circle1"></div>
+            <div class="circle2"></div>
         </section>
     </main>
 
@@ -205,9 +258,9 @@
             <ul>
                 <li>Nous contacter</li>
                 <li>Service client</li>
-                <li onclick="window.location=`mailto:${this.innerHTML}`">support@mail.com</li>
+                <li onclick="window.location=`mailto:${innerHTML}`">support@mail.com</li>
                 <li>Contact</li>
-                <li onclick="window.location=`mailto:${this.innerHTML}`">contact@mail.com</li>
+                <li onclick="window.location=`mailto:${innerHTML}`">contact@mail.com</li>
             </ul>
         </div>
 

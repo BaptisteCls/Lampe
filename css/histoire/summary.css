@@ -4,10 +4,16 @@
     align-items: center;
 
     width: 100%;
+
+    padding: 70px 0;
 }
 
 .summary:where(p,h1){
     text-align: center;
+}
+
+.summary h1{
+    font-size: 30px;
 }
 
 .summary>div{

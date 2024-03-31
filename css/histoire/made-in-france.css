@@ -3,7 +3,8 @@
 
     display: flex;
 
-    background-color: rgb(255, 233, 226);
+    background-color: #4b4b4b;
+    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #e6e6e6 10px ), repeating-linear-gradient( #eeeeee, #d6d6d6 );
 }
 
 .made-in-france>div:first-child{
@@ -20,10 +21,16 @@
     align-items: center;
     justify-content: space-evenly;
 
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
+    border-top-left-radius: 9%;
+    border-bottom-left-radius: 9%;
 
     background-color: rgb(174, 240, 199);
+    background-repeat: no-repeat;
+    background-position: right;
+
+    position: relative;
+    
+    overflow: hidden;
 }
 
 .made-in-france .right h1{
@@ -52,6 +59,27 @@
 
 .made-in-france .right a:hover{
     background-color: transparent;
+}
+
+.made-in-france .ligneBox{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.made-in-france .ligneBox i{
+    width: 33.33%;
+    height: 38px;
+}
+
+.made-in-france .ligneBox .middle{
+    background: url("../../img/innovationPoint.png");
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.made-in-france .ligneBox .end{
+    background: url("../../img/innovationLigne.png");
 }
 
 .made-in-france .left{
@@ -88,14 +116,14 @@
 .made-in-france .circle2{
     border-radius: 50%;
 
-    width: 180px;
-    height: 180px; 
+    width: 250px;
+    height: 250px; 
 
     background-color: rgb(198, 247, 217);
 
     position: absolute;
-    right: 0;
-    bottom: -1400px;
+    left: -50px;
+    bottom: 50px;
 
     z-index: 3;
 }

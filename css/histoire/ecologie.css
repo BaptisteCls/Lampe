@@ -5,8 +5,7 @@
 
     width: 100%;
 
-    background-color: #f5f5f5;
-    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #f5f5f5 10px ), repeating-linear-gradient( #f3f3f3, #f0efef );
+    padding: 70px 0;
 }
 
 .écologie strong{
