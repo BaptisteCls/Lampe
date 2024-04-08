@@ -3,8 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,7 +28,18 @@
     <script src="js/histoire.js" defer></script>
 </head>
 <body>
-    <%@ include file="header.html" %>
+    <div id="headContainer">
+        <div class="annonce">-20% sur tout le site</div>
+        <header>
+            <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+            <div>
+                <p>Produits</p>
+                <p>L'histoire</p>
+                <p>Réseaux</p>
+            </div>
+            <img src="./img/logo.jpg" onclick="location.href = '/'">
+        </header>
+    </div>
 
     <nav>
         <h1>Menu <i onclick="toggleMenu()" class="fa-solid fa-xmark"></i></h1>
