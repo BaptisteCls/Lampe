@@ -9,6 +9,10 @@
     flex-direction: column;
     align-items: center;
 
+    overflow: hidden;
+
+    position: relative;
+
 }
 
 .innovation strong{
@@ -106,8 +110,8 @@
     background-color: rgb(198, 247, 217);
 
     position: absolute;
-    right: 10%;
-    bottom: -120px;
+    right: 7%;
+    bottom: 50px;
 
     z-index: 1;
 }

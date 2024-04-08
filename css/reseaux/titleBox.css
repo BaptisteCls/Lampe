@@ -1,0 +1,88 @@
+.titleBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 50px 0;
+}
+
+.reseauxBox{
+    width: 95%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+.reseauxChoice{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.reseauxChoice .choice{
+    width: 25%;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    background-color: darksalmon;
+
+    border: solid 4px darksalmon;
+    border-bottom: none;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+    margin: 0;
+    padding: 10px 0;
+    
+    transition: .1s all ease-in-out;
+}
+
+.reseauxChoice .choice:not(.active):hover{
+    background-color: lightsalmon;
+    border-color: lightsalmon;
+}
+
+.reseauxChoice .choice.active{
+    background-color: white;
+}
+
+.reseauxDisplay{
+    border: solid 4px darksalmon;
+    border-top: none;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+    width: calc(100% - 8px);
+}
+
+.reseauxDisplay>div{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.reseauxDisplay a{
+    border-radius: 30px;
+
+    padding: 15px 30px;
+
+    background-color: darksalmon;
+
+    transition: all .2s ease-in-out;
+}
+
+.reseauxDisplay a:hover{
+    background-color: lightsalmon;
+}
+
+.column{
+    display: block;
+    flex-direction: column;
+    align-items: center;
+}
