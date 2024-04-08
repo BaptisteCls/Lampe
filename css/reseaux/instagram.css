@@ -49,11 +49,19 @@
     max-width: 300px;
 }
 
+.instagram .left p{
+    max-width: 300px;
+
+    font-size: 18px;
+
+    text-wrap: wrap;
+}
+
 .instagram .left button{
     background: rgb(255,192,203);
     background: linear-gradient(145deg, rgba(255,192,203,1) 76%, rgba(255,255,255,1) 100%);
 
-    border: pink 2.5px solid;
+    border: pink 3px solid;
     border-radius: 25px;
 
     width: 80%;
@@ -67,7 +75,7 @@
 
     padding: 6.5px 0;
 
-    margin-top: 90px;
+    margin-top: 60px;
 
     display: flex;
     justify-content: center;

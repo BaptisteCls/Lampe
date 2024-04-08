@@ -1,0 +1,121 @@
+.facebook{
+    width: 95%;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    margin-top: 80px;
+    padding-bottom: 110px;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+
+    border-bottom: 10px solid rgb(4, 4, 75);
+}
+
+.facebook .couple{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin: 8px;
+}
+
+.facebook .card{
+    width: 20vw;
+    min-width: 300px;
+    height: 20vw;
+    min-height: 300px;
+
+    transition: all .5s ease-in-out;
+
+    background-color: rgb(4, 4, 75);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.facebook .card img{
+    width: 97%;
+}
+
+.facebook p{
+    max-width: 90%;
+    font-size: 40px;
+    text-align: center;
+    font-weight: bolder;
+
+    margin: 0;
+}
+
+
+.facebook .white{
+    color: white;
+}
+
+.facebook .pink{
+    color: pink;
+    font-size: 50px;
+}
+
+.facebook .card:hover{
+    width: 23vw;
+    min-width: 345px;
+    height: 23vw;
+    min-height: 345px;
+    
+    cursor: pointer;
+}
+
+.facebook .card>i{
+    font-size: 280px;
+
+    color: pink;
+
+    filter: drop-shadow(white 8px 8px 1px);
+}
+
+.facebook button{
+    width: 60%;
+
+    padding: 10px 0;
+
+    border: solid 3px pink;
+    border-radius: 20px;
+
+    color: white;
+    background-color: pink;
+
+    transition: .3s all ease-in-out;
+
+    font-size: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+
+    margin-top: 60px;
+}
+
+.facebook button:hover{
+    cursor: pointer;
+
+    background-color: transparent;
+}
+
+.facebook .left{
+    height: auto;
+    padding: 35px 25px;
+
+    margin-right: 45px;
+
+    background-color: rgb(4, 4, 75);
+
+    color: white;
+
+    border-radius: 100% 0% 98% 2% / 0% 90% 10% 100%;
+}
