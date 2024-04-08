@@ -1,0 +1,36 @@
+.instagram{
+    margin-top: 50px;
+
+    width: 100%;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+.left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.left .tag{
+    min-width: 200px;
+
+    display: flex;
+    justify-content: start;
+    gap: 20px;
+}
+
+.left .tag i{
+    padding: 10px 30px;
+}
+
+.left .tag>i:first-child{
+    color: rgb(4, 4, 75);
+    background-color: pink;
+}
+
+.left .tag>i:last-child{
+    color: pink;
+    background-color: rgb(4, 4, 75);
+}
