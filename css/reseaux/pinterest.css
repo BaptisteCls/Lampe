@@ -1,0 +1,123 @@
+.pinterest{
+    width: 95%;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    margin-top: 80px;
+    padding-bottom: 110px;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+
+    border-bottom: 10px solid rgb(4, 4, 75);
+}
+
+.pinterest .couple{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin: 8px;
+}
+
+.pinterest .card{
+    width: 20vw;
+    min-width: 300px;
+    height: 20vw;
+    min-height: 300px;
+
+    transition: all .5s ease-in-out;
+
+    background-color: rgb(4, 4, 75);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.pinterest .card img{
+    width: 97%;
+}
+
+.pinterest p{
+    max-width: 90%;
+    font-size: 40px;
+    text-align: center;
+    font-weight: bolder;
+
+    margin: 0;
+}
+
+.pinterest .small{
+    font-size: 30px;
+}
+
+.pinterest .min{
+    font-size: 22px;
+}
+
+.pinterest .white{
+    color: white;
+}
+
+.pinterest .pink:not(.small){
+    color: pink;
+    font-size: 50px;
+}
+
+.pinterest .pink.small{
+    color: rgba(255, 192, 203, 0.70);
+}
+
+.pinterest .white.min{
+    color: rgba(255, 255, 255, 0.801);
+}
+
+.pinterest .card:hover{
+    width: 23vw;
+    min-width: 345px;
+    height: 23vw;
+    min-height: 345px;
+    
+    cursor: pointer;
+}
+
+.pinterest .card>i{
+    font-size: 280px;
+
+    color: pink;
+
+    filter: drop-shadow(white 8px 8px 1px);
+}
+
+.pinterest button{
+    width: 60%;
+
+    padding: 10px 0;
+
+    border: solid 3px pink;
+    border-radius: 20px;
+
+    color: white;
+    background-color: pink;
+
+    transition: .3s all ease-in-out;
+
+    font-size: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+
+    margin-top: 60px;
+}
+
+.pinterest button:hover{
+    cursor: pointer;
+
+    background-color: transparent;
+}

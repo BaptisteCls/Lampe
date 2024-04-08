@@ -2,35 +2,106 @@
     margin-top: 50px;
 
     width: 100%;
+    height: max-content;
 
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 5%;
+
+    margin-top: 80px;
+    padding-bottom: 110px;
+
+    border-bottom: 10px pink solid;
 }
 
-.left{
+.instagram .left{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: start;
 }
 
-.left .tag{
+.instagram .left .tag{
     min-width: 200px;
+    width: 100%;
 
     display: flex;
     justify-content: start;
     gap: 20px;
 }
 
-.left .tag i{
+.instagram .left .tag i{
     padding: 10px 30px;
 }
 
-.left .tag>i:first-child{
+.instagram .left .tag>i:first-child{
     color: rgb(4, 4, 75);
     background-color: pink;
 }
 
-.left .tag>i:last-child{
+.instagram .left .tag>i:last-child{
     color: pink;
     background-color: rgb(4, 4, 75);
+}
+
+.instagram .left h1{
+    font-size: 40px;
+    max-width: 300px;
+}
+
+.instagram .left button{
+    background: rgb(255,192,203);
+    background: linear-gradient(145deg, rgba(255,192,203,1) 76%, rgba(255,255,255,1) 100%);
+
+    border: pink 2.5px solid;
+    border-radius: 25px;
+
+    width: 80%;
+
+    color: rgb(4, 4, 75);
+    font-size: 30px;
+
+    cursor: pointer;
+
+    transition: all .5s ease-in-out;
+
+    padding: 6.5px 0;
+
+    margin-top: 90px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.instagram .left button:hover{
+    transition: all .5s ease-in-out;
+    background: white;
+}
+
+.instagram .right .phone{
+    background-image: url(../../img/phone.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    filter: drop-shadow(black 0 0 20px);
+
+    height: 480px;
+
+    display: flex;
+    align-items: center;
+}
+
+.instagram .right .posts{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 5px;
+
+    background-color: white;
+}
+
+.instagram .right .post{
+    width: 200px;
 }
