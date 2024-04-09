@@ -1,4 +1,4 @@
-.instagram{
+.tiktok{
     margin-top: 50px;
 
     width: 100%;
@@ -14,14 +14,14 @@
     border-bottom: 10px pink solid;
 }
 
-.instagram .left{
+.tiktok .right{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: start;
 }
 
-.instagram .left .tag{
+.tiktok .right .tag{
     min-width: 200px;
     width: 100%;
 
@@ -30,26 +30,26 @@
     gap: 20px;
 }
 
-.instagram .left .tag i{
+.tiktok .right .tag i{
     padding: 10px 30px;
 }
 
-.instagram .left .tag>i:first-child{
+.tiktok .right .tag>i:last-child{
     color: rgb(4, 4, 75);
     background-color: pink;
 }
 
-.instagram .left .tag>i:last-child{
+.tiktok .right .tag>i:first-child{
     color: pink;
     background-color: rgb(4, 4, 75);
 }
 
-.instagram .left h1{
+.tiktok .right h1{
     font-size: 40px;
     max-width: 300px;
 }
 
-.instagram .left p{
+.tiktok .right p{
     max-width: 300px;
 
     font-size: 18px;
@@ -57,15 +57,15 @@
     text-wrap: wrap;
 }
 
-.instagram .left button{
-    background: pink;
+.tiktok .right button{
+    background: rgb(4, 4, 75);
 
-    border: pink 3px solid;
+    border: rgb(4, 4, 75) 3px solid;
     border-radius: 25px;
 
     width: 80%;
 
-    color: rgb(4, 4, 75);
+    color: pink;
     font-size: 30px;
 
     cursor: pointer;
@@ -82,12 +82,12 @@
     gap: 10px;
 }
 
-.instagram .left button:hover{
+.tiktok .right button:hover{
     transition: all .5s ease-in-out;
     background: white;
 }
 
-.instagram .right .phone{
+.tiktok .left .phone{
     background-image: url(../../img/phone.png);
     background-position: center;
     background-size: contain;
@@ -101,7 +101,7 @@
     align-items: center;
 }
 
-.instagram .right .posts{
+.tiktok .left .posts{
     display: flex;
     justify-content: space-evenly;
     gap: 5px;
@@ -109,6 +109,6 @@
     background-color: white;
 }
 
-.instagram .right .post{
+.tiktok .left .post{
     width: 200px;
 }
